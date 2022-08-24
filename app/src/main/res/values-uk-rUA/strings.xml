@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Level1</string>
+    <string name="settingsTextView">Налаштування</string>
+    <string name="textFirstLastName">Сергій Поліщук</string>
+    <string name="textCareer">Посада</string>
+    <string name="textHomeAddress">Адреса</string>
+    <string name="btnEditProfile">Редагувати профіль</string>
+    <string name="btnViewContact">Мої контакти</string>
+    <string name="textView">Давай знайомитись</string>
+    <string name="fill_out_the_profile_and_go_to_the_application">Заповнюйте профіль і переходьте до заявки!</string>
+    <string name="e_mail">e-mail</string>
+    <string name="polischuk0107_gmail_com">polischuk0107@gmail.com</string>
+    <string name="e_mail_text">E-mail</string>
+    <string name="password">Password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="_12345678">12345678</string>
+    <string name="or">or</string>
+    <string name="register">register</string>
+    <string name="by_clicking_register_you_agree_to_our_terms">By clicking Register you agree to our Terms</string>
+    <string name="and_conditions">and Conditions</string>
+</resources>
