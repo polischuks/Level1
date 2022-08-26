@@ -4,12 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AuthActivity">
+    tools:context=".ui.AuthActivity">
 
     <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="#242235"
         android:backgroundTint="#242235"
         android:orientation="vertical"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarDefaultDelayBeforeFade="400"
+        android:scrollbarFadeDuration="250"
+        android:scrollbarSize="2dp"
+        android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,17 +58,15 @@
             android:textColor="#FFFFFF" />
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress"
+            android:id="@+id/editTextEmailAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="16dp"
             android:clickable="true"
-            android:contentDescription="@string/e_mail"
             android:inputType="textEmailAddress"
             android:shadowColor="#FFFFFF"
-            android:text="@string/polischuk0107_gmail_com"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
@@ -83,10 +88,9 @@
             android:layout_marginTop="0dp"
             android:layout_marginEnd="16dp"
             android:clickable="true"
-            android:contentDescription="@string/e_mail"
+            android:contentDescription="@string/user_email"
             android:inputType="textPassword"
             android:shadowColor="#FFFFFF"
-            android:text="@string/_12345678"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
@@ -109,7 +113,7 @@
             android:layout_marginTop="67dp"
             android:layout_marginEnd="16dp"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/btnGoogle" />
+            app:srcCompat="@drawable/btn_google" />
 
         <TextView
             android:id="@+id/textView5"
@@ -153,7 +157,7 @@
             android:text="@string/by_clicking_register_you_agree_to_our_terms"
             android:textColor="#FFFFFF"
             android:textSize="12sp"
-            app:layout_constraintBottom_toTopOf="@+id/btnReg"/>
+            app:layout_constraintBottom_toTopOf="@+id/btnReg" />
 
         <TextView
             android:id="@+id/textView8"
@@ -176,19 +180,19 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:gravity="center"
-            android:text="Already have an account?"
+            android:text="@string/already_have_an_account"
             android:textColor="#B2B2B3"
             android:textSize="14sp" />
 
         <TextView
-            android:id="@+id/textView10"
+            android:id="@+id/textViewSignIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
+            android:layout_gravity="end"
             android:layout_marginTop="-20dp"
-            android:layout_marginEnd="76dp"
+            android:layout_marginEnd="20dp"
             android:gravity="center"
-            android:text="Sign in"
+            android:text="@string/sign_in"
             android:textColor="#FFFFFF"
             android:textSize="14sp" />
 
