@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Level1</string>
+    <string name="settingsTextView">Настройки</string>
+    <string name="textFirstLastName">Сергей Полищук</string>
+    <string name="textCareer">Должность</string>
+    <string name="textHomeAddress">Адресс</string>
+    <string name="btnEditProfile">Редактировать профиль</string>
+    <string name="btnViewContact">Мои контакты</string>
+    <string name="textView">Давай знакомиться</string>
+    <string name="fill_out_the_profile_and_go_to_the_application">Заполняй профиль и переходи к регистрации!</string>
+    <string name="e_mail">e-mail</string>
+    <string name="user_email">polischuk.serhii@gmail.com</string>
+    <string name="e_mail_text">E-mail</string>
+    <string name="password">Пароль</string>
+    <string name="remember_me">запомнить меня</string>
+    <string name="_12345678">12345678</string>
+    <string name="or">или</string>
+    <string name="register">Зарегистрироваться</string>
+    <string name="by_clicking_register_you_agree_to_our_terms">Нажимая «Зарегистрироваться» вы соглашаетесь</string>
+    <string name="and_conditions">с нашими Условиями</string>
+    <string name="error_user_name">Ошибка имени пользователя!!!</string>
+    <string name="sign_in">Войти</string>
+    <string name="already_have_an_account">Уже есть аккаунт?</string>
+    <string name="email_is_register">Эта електронная почта зарегистрирована</string>
+    <string name="need_register">Вам необходимо зарегистрироваться.</string>
+    <string name="pass_empty">Пароль не может быть пустым!!!</string>
+    <string name="pass_error">Ошибка пароля!!!</string>
+</resources>
