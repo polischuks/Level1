@@ -26,4 +26,6 @@
     <string name="need_register">Вам необходимо зарегистрироваться.</string>
     <string name="pass_empty">Пароль не может быть пустым!!!</string>
     <string name="pass_error">Ошибка пароля!!!</string>
+    <string name="google">Google</string>
+    <string name="goo_logo">Goo_logo</string>
 </resources>

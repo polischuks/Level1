@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#283593"
+    android:backgroundTint="#283593"
     android:scrollbarAlwaysDrawVerticalTrack="true"
     android:scrollbarStyle="outsideInset"
     tools:context=".view.AuthActivity">
@@ -12,6 +14,7 @@
         android:id="@+id/scroll_auth"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:backgroundTint="#3F51B5"
         android:fillViewport="true"
         android:scrollbars="vertical"
         android:verticalScrollbarPosition="right"
@@ -23,8 +26,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="#242235"
-            android:backgroundTint="#242235"
+            android:background="#FF0F1017"
+            android:backgroundTint="#0F1017"
             android:orientation="vertical"
             android:scrollbarAlwaysDrawVerticalTrack="true"
             android:scrollbarDefaultDelayBeforeFade="400"
@@ -46,7 +49,7 @@
                 android:layout_marginEnd="16dp"
                 android:gravity="center"
                 android:text="@string/textView"
-                android:textColor="#FFFFFF"
+                android:textColor="#BBDEFB"
                 android:textSize="24sp" />
 
             <TextView
@@ -58,7 +61,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:text="@string/fill_out_the_profile_and_go_to_the_application"
-                android:textColor="#FFFFFF"
+                android:textColor="#BBDEFB"
                 android:textSize="12sp" />
 
             <TextView
@@ -69,7 +72,7 @@
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="16dp"
                 android:text="@string/e_mail_text"
-                android:textColor="#FFFFFF" />
+                android:textColor="#BBDEFB" />
 
             <EditText
                 android:id="@+id/editTextEmailAddress"
@@ -81,7 +84,7 @@
                 android:clickable="true"
                 android:inputType="textEmailAddress"
                 android:shadowColor="#FFFFFF"
-                android:textColor="#FFFFFF"
+                android:textColor="#BBDEFB"
                 android:textSize="18sp" />
 
             <TextView
@@ -92,7 +95,7 @@
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="16dp"
                 android:text="@string/password"
-                android:textColor="#FFFFFF" />
+                android:textColor="#BBDEFB" />
 
             <EditText
                 android:id="@+id/editTextTextPassword"
@@ -105,7 +108,7 @@
                 android:contentDescription="@string/user_email"
                 android:inputType="textPassword"
                 android:shadowColor="#FFFFFF"
-                android:textColor="#FFFFFF"
+                android:textColor="#BBDEFB"
                 android:textSize="18sp" />
 
             <CheckBox
@@ -117,7 +120,7 @@
                 android:layout_marginEnd="16dp"
                 android:checked="true"
                 android:text="@string/remember_me"
-                android:textColor="#B2B2B3" />
+                android:textColor="#BBDEFB" />
 
             <ImageButton
                 android:id="@+id/imageButton4"
@@ -126,7 +129,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="67dp"
                 android:layout_marginEnd="16dp"
-                android:backgroundTint="#FFFFFF"
+                android:backgroundTint="#BBDEFB"
                 app:srcCompat="@drawable/google_btn" />
 
             <TextView
@@ -138,7 +141,7 @@
                 android:layout_marginEnd="16dp"
                 android:gravity="center"
                 android:text="@string/or"
-                android:textColor="#FFFFFF"
+                android:textColor="#BBDEFB"
                 android:textSize="18sp" />
 
             <Button
@@ -149,16 +152,15 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
-                android:backgroundTint="#00FFFFFF"
+                android:backgroundTint="#1B203E"
                 android:text="@string/register"
-                android:textColor="#FAFAFA"
+                android:textColor="#BBDEFB"
                 android:textSize="16sp"
                 android:visibility="visible"
                 app:layout_constraintBottom_toTopOf="@+id/textView5"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:strokeColor="#FB5E06"
-                app:strokeWidth="2dp" />
+                app:strokeWidth="0dp" />
 
             <TextView
                 android:id="@+id/textView7"
@@ -169,7 +171,7 @@
                 android:layout_marginEnd="16dp"
                 android:gravity="center"
                 android:text="@string/by_clicking_register_you_agree_to_our_terms"
-                android:textColor="#FFFFFF"
+                android:textColor="#BBDEFB"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toTopOf="@+id/btnReg" />
 
@@ -182,7 +184,7 @@
                 android:layout_marginEnd="16dp"
                 android:gravity="center"
                 android:text="@string/and_conditions"
-                android:textColor="#FFFFFF"
+                android:textColor="#BBDEFB"
                 android:textSize="12sp" />
 
             <TextView
@@ -195,7 +197,7 @@
                 android:layout_marginEnd="16dp"
                 android:gravity="center"
                 android:text="@string/already_have_an_account"
-                android:textColor="#B2B2B3"
+                android:textColor="#BBDEFB"
                 android:textSize="14sp" />
 
             <TextView
@@ -207,7 +209,7 @@
                 android:layout_marginEnd="20dp"
                 android:gravity="center"
                 android:text="@string/sign_in"
-                android:textColor="#FFFFFF"
+                android:textColor="#BBDEFB"
                 android:textSize="14sp" />
         </LinearLayout>
     </ScrollView>

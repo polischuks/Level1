@@ -3,7 +3,6 @@ package com.polishchuk.level1.view
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -33,14 +32,12 @@ class AuthActivity : AppCompatActivity() {
         if (controller.hasVisited) {
             emailField.text = Editable.Factory.getInstance()
                 .newEditable(controller.user.userEmail)
-            Log.i("Level1", controller.hasVisited.toString())
         }
 
         btnReg.setOnClickListener {
             controller.emailUser = emailField.text.toString()
             controller.passUser = passField.text.toString()
             if (!controller.emailIsValid()) {
-                Log.i("Level1", "emailIsValid ".plus(controller.emailIsValid().toString()))
                 Toast.makeText(this, R.string.error_user_name, Toast.LENGTH_SHORT)
                     .show()
                 return@setOnClickListener
@@ -72,6 +69,7 @@ class AuthActivity : AppCompatActivity() {
                 val intent = Intent(this, MainActivity::class.java)
                 intent.putExtra("userName", controller.getSavedUser().userName)
                 startActivity(intent)
+                overridePendingTransition(R.anim.slidein, R.anim.slideout)
             } else
                 Toast.makeText(this, R.string.need_register, Toast.LENGTH_SHORT)
                     .show()
