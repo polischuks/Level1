@@ -28,4 +28,5 @@
     <string name="pass_error">Ошибка пароля!!!</string>
     <string name="google">Google</string>
     <string name="goo_logo">Goo_logo</string>
+    <string name="vkbutton">vkButton</string>
 </resources>

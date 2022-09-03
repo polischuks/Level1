@@ -6,18 +6,16 @@ import com.polishchuk.level1.model.User
 import com.polishchuk.level1.view.AuthActivity
 
 class AppController(authActivity: AuthActivity) {
-
     lateinit var user: User
     var hasVisited = false
-        get() {
-            return field
-        }
     private var appSettings: SettingsImpl
+    private val authActivity: AuthActivity
     lateinit var emailUser: String
     lateinit var passUser: String
 
     init {
         appSettings = SettingsImpl(authActivity)
+        this.authActivity = authActivity
         hasVisited = appSettings.checkSetting()
         if (hasVisited) user = appSettings.getUser()
     }
@@ -26,7 +24,10 @@ class AppController(authActivity: AuthActivity) {
         appSettings.saveSettings(User(emailUser, passUser, getUserName(emailUser)))
     }
 
-    fun emailIsValid() = emailUser.contains("@")
+    fun emailIsValid(): Boolean {
+        Log.i("CONTROLLER", authActivity.toString())
+        return emailUser.contains("@")
+    }
 
     fun emailIsRegister(): Boolean {
         return if (hasVisited)

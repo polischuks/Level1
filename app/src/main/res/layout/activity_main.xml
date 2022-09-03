@@ -2,229 +2,197 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
+    android:backgroundTint="@color/background"
     android:scrollbarAlwaysDrawVerticalTrack="true"
     android:scrollbarStyle="outsideInset"
     tools:context=".view.MainActivity">
 
-    <ScrollView
-        android:id="@+id/scroll_main"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topContainerMain"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:fillViewport="true"
-        android:scrollbars="vertical"
-        android:verticalScrollbarPosition="right"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="@dimen/zero_margin"
+        android:background="@color/background"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/settingsTextView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="0dp"
-            android:orientation="vertical"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:text="@string/settingsTextView"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size24"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_24"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/card_viewRadius250"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settingsTextView"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="@dimen/image_size113"
+                android:layout_height="@dimen/image_size113"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ava" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textFirstLastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/zero_margin"
+            android:layout_marginTop="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/zero_margin"
+            android:text="@string/textFirstLastName"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size18"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+        <TextView
+            android:id="@+id/textCareer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/zero_margin"
+            android:layout_marginTop="@dimen/half_normal_indent"
+            android:layout_marginEnd="@dimen/zero_margin"
+            android:text="@string/textCareer"
+            android:textColor="@color/gray_back"
+            android:textSize="@dimen/normal_text_size14"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textFirstLastName" />
+
+        <TextView
+            android:id="@+id/textHomeAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/half_normal_indent"
+            android:layout_marginBottom="8dp"
+            android:text="@string/textHomeAddress"
+            android:textColor="@color/gray_back"
+            android:textSize="@dimen/normal_text_size14"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/textCareer" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="match_parent"
-                android:layout_height="fill_parent"
-                android:layout_marginStart="0dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="0dp"
-                android:layout_weight="1"
-                android:background="#242235"
-                android:visibility="visible"
-                app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints">
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <TextView
-                    android:id="@+id/settingsTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="17dp"
-                    android:layout_marginTop="17dp"
-                    android:text="@string/settingsTextView"
-                    android:textColor="@color/white"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomContainerMain"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zero_margin"
+        android:background="@color/white"
+        android:clickable="false"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/topContainerMain"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="113dp"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="148dp"
-                    android:layout_marginTop="103dp"
-                    android:layout_marginEnd="148dp"
-                    app:cardBackgroundColor="@color/white"
-                    app:cardCornerRadius="250dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="MissingConstraints">
+        <ImageButton
+            android:id="@+id/fbButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/alfaBack"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/inButton"
+            app:layout_constraintEnd_toStartOf="@+id/inButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/inButton"
+            app:srcCompat="@drawable/fb_button" />
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="113dp"
-                        android:layout_height="113dp"
-                        android:layout_gravity="center"
-                        app:cardCornerRadius="250dp">
+        <ImageButton
+            android:id="@+id/inButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/alfaBack"
+            android:clickable="true"
+            app:layout_constraintBottom_toTopOf="@+id/btnEditProfile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.566"
+            app:srcCompat="@drawable/in_button" />
 
-                        <ImageView
-                            android:layout_width="113dp"
-                            android:layout_height="113dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/ava" />
+        <ImageButton
+            android:id="@+id/vkButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/alfaBack"
+            android:clickable="true"
+            android:contentDescription="@string/vkbutton"
+            app:layout_constraintBottom_toBottomOf="@+id/inButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/inButton"
+            app:layout_constraintTop_toTopOf="@+id/inButton"
+            app:layout_constraintVertical_bias="0.504"
+            app:srcCompat="@drawable/vk_button" />
 
-                    </androidx.cardview.widget.CardView>
-                </androidx.cardview.widget.CardView>
+        <Button
+            android:id="@+id/btnEditProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginEnd="@dimen/normal_margin"
+            android:layout_marginBottom="@dimen/normal_margin"
+            android:backgroundTint="@color/white"
+            android:text="@string/btnEditProfile"
+            android:textAllCaps="false"
+            android:textColor="@color/blue_gray"
+            android:textSize="14sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/btnViewContact"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@color/black"
+            app:strokeWidth="@dimen/stroke_width2" />
 
-                <TextView
-                    android:id="@+id/textFirstLastName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginStart="137dp"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginEnd="133dp"
-                    android:text="@string/textFirstLastName"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cardView" />
+        <Button
+            android:id="@+id/btnViewContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginEnd="@dimen/normal_margin"
+            android:layout_marginBottom="@dimen/normal_margin"
+            android:backgroundTint="@color/orange"
+            android:text="@string/btnViewContact"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-                <TextView
-                    android:id="@+id/textCareer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/textCareer"
-                    android:textColor="#B2B2B3"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textFirstLastName" />
-
-                <TextView
-                    android:id="@+id/textHomeAddress"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/textHomeAddress"
-                    android:textColor="#B2B2B3"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textCareer" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/linearLayout2"
-                android:layout_width="match_parent"
-                android:layout_height="fill_parent"
-                android:layout_marginStart="0dp"
-                android:layout_marginEnd="0dp"
-                android:layout_marginBottom="0dp"
-                android:layout_weight="1"
-                android:clickable="false"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-                tools:ignore="MissingConstraints">
-
-                <ImageButton
-                    android:id="@+id/fbButton"
-                    android:layout_width="0dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="left"
-                    android:layout_marginTop="62dp"
-                    android:layout_marginEnd="32dp"
-                    android:background="#00FFFFFF"
-                    android:clickable="true"
-                    app:layout_constraintEnd_toStartOf="@+id/inButton"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/fb_button" />
-
-                <ImageButton
-                    android:id="@+id/inButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="62dp"
-                    android:background="#00FFFFFF"
-                    android:clickable="true"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/in_button" />
-
-                <ImageButton
-                    android:id="@+id/vkButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="60dp"
-                    android:layout_gravity="right"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="62dp"
-                    android:background="#00FFFFFF"
-                    android:clickable="true"
-                    app:layout_constraintStart_toEndOf="@+id/inButton"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/vk_button" />
-
-                <Button
-                    android:id="@+id/btnEditProfile"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="95dp"
-                    android:layout_marginEnd="16dp"
-                    android:backgroundTint="#FFFFFF"
-                    android:text="@string/btnEditProfile"
-                    android:textAllCaps="false"
-                    android:textColor="#18181F"
-                    android:textSize="14sp"
-                    android:visibility="visible"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/inButton"
-                    app:strokeColor="#090909"
-                    app:strokeWidth="2dp" />
-
-                <Button
-                    android:id="@+id/btnViewContact"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:backgroundTint="#FB5E06"
-                    android:text="@string/btnViewContact"
-                    android:textColor="#FFFFFF"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/btnEditProfile" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
-    </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
